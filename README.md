@@ -26,7 +26,7 @@ number of points. Each user's points are updated each minute.
 * [OPTIONAL] Install Node.js dependencies with `npm install` inside the `assets` directory
 * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser to see the
+Now you can visit [`localhost:3000`](http://localhost:3000) from your browser to see the
 JSON response from the API.
 
 ## Development
