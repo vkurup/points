@@ -13,16 +13,17 @@ defmodule PointsWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PointsWeb do
+  scope "/web", PointsWeb do
     pipe_through :browser
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PointsWeb do
-  #   pipe_through :api
-  # end
+  scope "/", PointsWeb do
+    pipe_through :api
+    get "/", UserController, :index
+  end
 
   # Enables LiveDashboard only for development
   #
