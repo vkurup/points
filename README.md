@@ -29,6 +29,10 @@ number of points. Each user's points are updated each minute.
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser to see the
 JSON response from the API.
 
+## Development
+
+* Use `mix ecto.reset` to refresh your DB from scratch
+* Use `./verify.sh` to format and test your code
 
 ## First time setup
 
