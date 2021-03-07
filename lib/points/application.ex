@@ -14,9 +14,10 @@ defmodule Points.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Points.PubSub},
       # Start the Endpoint (http/https)
-      PointsWeb.Endpoint
+      PointsWeb.Endpoint,
       # Start a worker by calling: Points.Worker.start_link(arg)
       # {Points.Worker, arg}
+      Points.Pointer
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
