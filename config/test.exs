@@ -20,3 +20,7 @@ config :points, PointsWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+if File.exists?("config/dev.secret.exs") do
+  import_config "dev.secret.exs"
+end

@@ -11,6 +11,17 @@ number of points. Each user's points are updated each minute.
 
 * [Install](https://elixir-lang.org/install.html) Erlang (23.2.7) and Elixir (1.11.3).
 * Install dependencies with `mix deps.get`
+* Add a `config/dev.secret.exs` file to customize how the app will connect to your
+  Postgresql DB. Here's what mine looks like, for Ubuntu:
+
+  ```
+  import Config
+
+  config :points, Points.Repo,
+    socket_dir: "/var/run/postgresql",
+    username: "vkurup",
+    password: ""
+  ```
 * Create and migrate your database with `mix ecto.setup`
 * [OPTIONAL] Install Node.js dependencies with `npm install` inside the `assets` directory
 * Start Phoenix endpoint with `mix phx.server`
