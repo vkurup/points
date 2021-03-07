@@ -16,5 +16,6 @@ defmodule Points.User do
     user
     |> cast(attrs, [:points])
     |> validate_required([:points])
+    |> check_constraint(:points, name: :points_range, message: "points must be between 0 and 100")
   end
 end
