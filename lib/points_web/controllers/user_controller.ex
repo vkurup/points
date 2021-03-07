@@ -3,8 +3,9 @@ defmodule PointsWeb.UserController do
   alias Points.Pointer
 
   def index(conn, _params) do
-    result = Pointer.query()
-    |> Map.take([:users, :timestamp])
+    result =
+      Pointer.query()
+      |> Map.take([:users, :timestamp])
 
     json(conn, result)
   end
